@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/api', routes);
+app.use('/', routes);
 
 app.listen(port, () => {
   console.log(`🚀  Server ready at ${port}`);

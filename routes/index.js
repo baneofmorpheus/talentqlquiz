@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.use(rateLimiterUsingThirdParty);
 router.get(
-  '/calculateAgeInYears',
+  '/howold',
   query('dob').exists({ checkNull: true, checkFalsy: true }).isInt(),
   calculateAgeController.calculateAgeInYears
 );
