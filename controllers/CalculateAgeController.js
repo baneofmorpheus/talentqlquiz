@@ -22,7 +22,7 @@ exports.calculateAgeInYears = async (req, res) => {
     /**
      * Convert timestamp to number from string and get birthDate object
      */
-    const birthDate = new Date(parseInt(req.query.dob));
+    const birthDate = new Date(parseInt(req.query.dob, 10));
     const currentDate = new Date();
 
     const diffinDateInMilliseconds = currentDate - birthDate;

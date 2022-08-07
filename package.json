@@ -4,7 +4,7 @@
   "description": "Build and deploy a very simple API that does the following",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --trace-warnings index.js"
   },
@@ -23,6 +23,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "express-rate-limit": "^6.5.1",
-    "express-validator": "^6.14.2"
+    "express-validator": "^6.14.2",
+    "pm2": "^5.2.0"
   }
 }
