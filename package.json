@@ -1,0 +1,28 @@
+{
+  "name": "talentqlquiz",
+  "version": "1.0.0",
+  "description": "Build and deploy a very simple API that does the following",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --trace-warnings index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baneofmorpheus/talentqlquiz.git"
+  },
+  "author": "Leon Chux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baneofmorpheus/talentqlquiz/issues"
+  },
+  "homepage": "https://github.com/baneofmorpheus/talentqlquiz#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.5.1",
+    "express-validator": "^6.14.2"
+  }
+}
