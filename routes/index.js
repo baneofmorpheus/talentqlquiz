@@ -16,10 +16,10 @@ router.get(
       /**
        * Check if timestamp is valid date timestamp
        */
-      const dateObject = new Date(value);
+      const dateObject = new Date(parseInt(value));
 
       if (dateObject.getTime() > 0) {
-        return;
+        return true;
       }
       throw new Error('invalid dob format');
     }),
