@@ -8,7 +8,11 @@ exports.calculateAgeInYears = async (req, res) => {
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ error: errors.array()[0]['msg'] });
+      return res.status(400).json({
+        error: `${
+          errors.array()[0]['msg']
+        }, dob is a required query param that must be a valid timestamp in the past.`,
+      });
     }
 
     /**
