@@ -29,7 +29,8 @@ exports.calculateAgeInYears = async (req, res) => {
     const birthDate = new Date(parseInt(req.query.dob, 10));
     const currentDate = new Date();
 
-    const diffinDateInMilliseconds = currentDate - birthDate;
+    const diffinDateInMilliseconds =
+      currentDate.getTime() - birthDate.getTime();
 
     /**Convert to yearts */
     const diffinDateInYears = Math.round(diffinDateInMilliseconds / year);
